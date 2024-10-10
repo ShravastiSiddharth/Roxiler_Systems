@@ -10,7 +10,7 @@ const TransactionsBarChart = ({ selectedMonth }) => {
 
   useEffect(() => {
     const fetchBarChartData = async () => {
-      const response = await fetch(`http://localhost:5000/api/bar-chart?month=${selectedMonth}`);
+      const response = await fetch(`https://roxiler-systems-m044.onrender.com/api/bar-chart?month=${selectedMonth}`);
       const data = await response.json();
       setChartData(data);
     };

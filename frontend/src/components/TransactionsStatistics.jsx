@@ -9,7 +9,7 @@ const TransactionsStatistics = ({ selectedMonth }) => {
 
   useEffect(() => {
     const fetchStatistics = async () => {
-      const response = await fetch(`http://localhost:5000/api/statistics?month=${selectedMonth}`);
+      const response = await fetch(`https://roxiler-systems-m044.onrender.com/api/statistics?month=${selectedMonth}`);
       const data = await response.json();
       setStatistics(data);
     };

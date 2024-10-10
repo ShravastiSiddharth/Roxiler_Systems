@@ -31,7 +31,7 @@ const TransactionsTable = () => {
   const fetchTransactions = async (searchText = '', month = selectedMonth, PriceValue = '') => {
     console.log('Fetching with:', { searchText, month, page, perPage, PriceValue });
     const response = await fetch(
-      `http://localhost:5000/api/transactions?search=${searchText}&month=${month}&page=${page}&perPage=${perPage}&price=${PriceValue}`
+      `https://roxiler-systems-m044.onrender.com/api/transactions?search=${searchText}&month=${month}&page=${page}&perPage=${perPage}&price=${PriceValue}`
     );
     const data = await response.json();
     setTransactions(data.data);
